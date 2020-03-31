@@ -1,14 +1,8 @@
-const express = require("express");
+const express = require('express');
+const OngController = require('../controllers/OngController');
 const routes = express.Router();
 
-routes.get("/:users", (req, res) => {
-  const query = req.query; //pegando um query params
-  const params = req.params.users; //pegando um route params
-  const body = req.body; //pegando um body params
-
-  console.log(body);
-
-  return res.json({ jossias: "go to sleap" });
-});
+routes.get('/ongs', OngController.index); //lista
+routes.post("/ongs", OngController.create); //cria
 
 module.exports = routes;

@@ -27,7 +27,7 @@ tipos de BD
 SQL: MYSQL, SQL LITE, MS SQL SERVER, PSTGRESQL, ETC
 NOSQL: MongoDB, couchDb, etc
 
-depedencias
+depedencias/ comnados essenciais
 /git flow init
 npm init 
 npm install create-react-app 
@@ -36,4 +36,6 @@ npm i nodemon -D
 npm i knex
 npm i sqlite3
 npx knex init
+npx knex migrate:make create_ong  
+npx knex migrate:latest
 */
