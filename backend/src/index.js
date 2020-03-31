@@ -1,8 +1,9 @@
 const express = require('express');
+const cors = require('cors');
 const routes = require('./routes/routes');
 const app = express();
 
-
+app.use(cors());
 app.use(express.json()); //informa que as requisicoes do body serao passadas no formato json
 app.use(routes);
 
@@ -38,4 +39,5 @@ npm i sqlite3
 npx knex init
 npx knex migrate:make create_ong  
 npx knex migrate:latest
+npm i cors /determina quem pode acessar a aplicacao
 */
