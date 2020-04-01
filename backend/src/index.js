@@ -40,4 +40,9 @@ npx knex init
 npx knex migrate:make create_ong  
 npx knex migrate:latest
 npm i cors /determina quem pode acessar a aplicacao
+
+front end:
+npm i react-icons
+npm i react-router-dom //para configurar rotas no react
+nom i axios // cliente http para conectar as requisoes do front com backend
 */
