@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/index.js",
+    "stop-win": "Taskkill /IM node.exe /F",
+    "stop-linux": "killall node"
   },
   "author": "",
   "license": "ISC",
