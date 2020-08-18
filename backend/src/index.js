@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json()); //informa que as requisicoes do body serao passadas no formato json
 app.use(routes);
 
-const PORT = 3333;
+const PORT = 3334;
 app.listen(PORT, () => console.log(`Servidor iniciou na porta ${PORT}`));
 
 /*
