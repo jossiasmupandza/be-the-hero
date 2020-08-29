@@ -3,7 +3,6 @@ import { Feather } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { View, Image, Text, TouchableOpacity, FlatList } from "react-native";
 
-
 import logoImg from '../../assets/logo.png';
 
 import styles from './style';
