@@ -1,12 +1,20 @@
 import React  from "react";
-import { View, Image, Text, TouchableOpacity } from "react-native";
 import { Feather } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
+import { View, Image, Text, TouchableOpacity, FlatList } from "react-native";
+
 
 import logoImg from '../../assets/logo.png';
 
 import styles from './style';
 
 export default function Incidents() {
+  const navigation = useNavigation();
+
+  function navigateToDetail() {
+    navigation.navigate('Details');
+  }
+
     return (
       <View style={styles.container}>
         <View style={styles.header}>
@@ -21,54 +29,33 @@ export default function Incidents() {
           Escolha um dos casos abaixo e salve o dia.
         </Text>
 
-        <View style={styles.incidentList}>
-          <View style={styles.incident}>
-            <Text style={styles.incidentProperty}>ONG:</Text>
-            <Text style={styles.incidentValue}>APAD</Text>
+        <FlatList 
+          style={styles.incidentList}
+          data={[1,2,3,4,5]}
+          keyExtractor={incident => String(incident)}
+          showsVerticalScrollIndicator={false}
+          renderItem={() => (
+            <View style={styles.incident}>
+              <Text style={styles.incidentProperty}>ONG:</Text>
+              <Text style={styles.incidentValue}>APAD</Text>
 
-            <Text style={styles.incidentProperty}>CASO:</Text>
-            <Text style={styles.incidentValue}>Cadelinha Atropelada</Text>
+              <Text style={styles.incidentProperty}>CASO:</Text>
+              <Text style={styles.incidentValue}>Cadelinha Atropelada</Text>
 
-            <Text style={styles.incidentProperty}>VALOR:</Text>
-            <Text style={styles.incidentValue}>MT 120,00</Text>
+              <Text style={styles.incidentProperty}>VALOR:</Text>
+              <Text style={styles.incidentValue}>MT 120,00</Text>
 
-            <TouchableOpacity style={styles.detailButton} onPress={() => {}}>
-              <Text style={styles.detailButtonText}>Ver mais detalhes</Text>
-              <Feather name="arrow-right" size={16} color="#E02041" />
-            </TouchableOpacity>
-          </View>
-
-          <View style={styles.incident}>
-            <Text style={styles.incidentProperty}>ONG:</Text>
-            <Text style={styles.incidentValue}>APAD</Text>
-
-            <Text style={styles.incidentProperty}>CASO:</Text>
-            <Text style={styles.incidentValue}>Cadelinha Atropelada</Text>
-
-            <Text style={styles.incidentProperty}>VALOR:</Text>
-            <Text style={styles.incidentValue}>MT 120,00</Text>
-
-            <TouchableOpacity style={styles.detailButton} onPress={() => {}}>
-              <Text style={styles.detailButtonText}>Ver mais detalhes</Text>
-              <Feather name="arrow-right" size={16} color="#E02041" />
-            </TouchableOpacity>
-          </View>
-          <View style={styles.incident}>
-            <Text style={styles.incidentProperty}>ONG:</Text>
-            <Text style={styles.incidentValue}>APAD</Text>
-
-            <Text style={styles.incidentProperty}>CASO:</Text>
-            <Text style={styles.incidentValue}>Cadelinha Atropelada</Text>
-
-            <Text style={styles.incidentProperty}>VALOR:</Text>
-            <Text style={styles.incidentValue}>MT 120,00</Text>
-
-            <TouchableOpacity style={styles.detailButton} onPress={() => {}}>
-              <Text style={styles.detailButtonText}>Ver mais detalhes</Text>
-              <Feather name="arrow-right" size={16} color="#E02041" />
-            </TouchableOpacity>
-          </View>
-        </View>
+              <TouchableOpacity 
+                style={styles.detailButton} 
+                onPress={navigateToDetail}
+              >
+                <Text style={styles.detailButtonText}>Ver mais detalhes</Text>
+                <Feather name="arrow-right" size={16} color="#E02041" />
+              </TouchableOpacity>
+            </View>
+          )}
+        />
+          
       </View>
     );
 }
