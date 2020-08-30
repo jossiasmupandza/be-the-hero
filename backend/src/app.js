@@ -9,8 +9,7 @@ app.use(express.json()); //informa que as requisicoes do body serao passadas no 
 app.use(routes);
 app.use(errors());
 
-const PORT = 3334;
-app.listen(PORT, () => console.log(`Servidor iniciou na porta ${PORT}`));
+module.exports = app;
 
 /*
 Rotas/recursos
