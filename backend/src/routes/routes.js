@@ -1,6 +1,10 @@
 const express = require('express');
 
-const { incidentsCreateValidator, incidentsDeleteValidator } = require('../validators/IncidentsValidator');
+const { 
+    incidentsCreateValidator, 
+    incidentsDeleteValidator, 
+    incidentsListValidator 
+} = require('../validators/IncidentsValidator');
 const { profileValidator } = require('../validators/ProfileValidator');
 const { ongCreateValidator } = require('../validators/OngValidator');
 const { sessionCreateValidator } = require('../validators/SessionValidator');
@@ -19,7 +23,7 @@ routes.post("/ongs", ongCreateValidator,OngController.create); //cria
 
 routes.get("/profile", profileValidator,ProfileController.index);
 
-routes.get('/incidents', IncidentController.index);
+routes.get("/incidents", incidentsListValidator, IncidentController.index);
 routes.post("/incidents", incidentsCreateValidator, IncidentController.create);
 routes.delete("/incidents/:id", incidentsDeleteValidator, IncidentController.delete);
 

@@ -15,11 +15,18 @@ const incidentsDeleteValidator = celebrate({
   [Segments.HEADERS]: Joi.object({
     authorization: Joi.string().required(),
   }).unknown(),
-  [Segments.QUERY]: {
+  [Segments.PARAMS]: {
     id: Joi.number().required(),
+  },
+});
+
+const incidentsListValidator = celebrate({
+  [Segments.QUERY]: {
+    page: Joi.number(),
   },
 });
 
 exports.incidentsCreateValidator = incidentsCreateValidator;
 exports.incidentsDeleteValidator = incidentsDeleteValidator;
+exports.incidentsListValidator = incidentsListValidator;
 
