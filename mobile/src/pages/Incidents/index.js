@@ -12,15 +12,32 @@ export default function Incidents() {
   const navigation = useNavigation();
   const [incidents, setIncidents] = useState([]);
   const [total, setTotal] = useState(0);
+  const [loading, setLoading] = useState(false);
+  const [page, setPage] = useState(1);
 
   function navigateToDetail(incident) {
     navigation.navigate('Details', { incident });
   }
 
   async function loadIncidents() {
-    const response = await api.get('incidents');
-    setIncidents(response.data);
+    if(loading) {
+      return;
+    }
+
+    if(total > 0 && incidents.length == total) {
+      return;
+    }
+
+    setLoading(true);
+
+    const response = await api.get('incidents', {
+      params: { page }
+    });
+
+    setIncidents([...incidents, ...response.data]);
     setTotal(response.headers['x-total-count'])
+    setPage(page + 1);
+    setLoading(false);
   }
 
   useEffect(() => {
@@ -45,7 +62,9 @@ export default function Incidents() {
         style={styles.incidentList}
         data={incidents}
         keyExtractor={incident => String(incident.id)}
-        showsVerticalScrollIndicator={false}
+        //showsVerticalScrollIndicator={false}
+        onEndReached={loadIncidents}
+        onEndReachedThreshold={0.2} //if the content is on the last 20% call function loadIncidents
         renderItem={({item: incident}) => (
           <View style={styles.incident}>
             <Text style={styles.incidentProperty}>ONG:</Text>
