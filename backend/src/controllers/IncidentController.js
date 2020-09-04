@@ -63,7 +63,7 @@ module.exports = {
 
             return res.status(204).send();
         } catch (error) {
-            console.error(error.message);
+            console.log(error.message);
             return res.status(500).send("Server error: " + error.message);
         }
         
