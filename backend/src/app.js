@@ -1,14 +1,15 @@
 const express = require('express');
 const cors = require('cors');
+const { errors } = require('celebrate');
 const routes = require('./routes/routes');
 const app = express();
 
 app.use(cors());
 app.use(express.json()); //informa que as requisicoes do body serao passadas no formato json
 app.use(routes);
+app.use(errors());
 
-const PORT = 3334;
-app.listen(PORT, () => console.log(`Servidor iniciou na porta ${PORT}`));
+module.exports = app;
 
 /*
 Rotas/recursos
