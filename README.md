@@ -15,12 +15,60 @@
 The application consists of a web and a mobile hybrid application (Android / IOS). NGOs use the web application to register and expose their cases, that is, a description for each exposed case as well as the amount needed to resolve it. People willing to help make use of the mobile application to view the cases and contact the NGOs to make donations.
 
 ## Screenshots
-![Example screenshot](./img/screenshot.png)
+<table>
+  <tr>
+    <th width="100%">Web Aplication</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/jossiasmupandza/be-the-hero/blob/develop/screenshots/bethehero-web.gif" />
+    </td>
+  </tr>
+</table>
+<br/>
+<table>
+  <tr>
+    <th colspan="3">Mobile Aplication</th>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/jossiasmupandza/be-the-hero/blob/develop/screenshots/bethehero-mobile-splash.png" />
+    </td>
+    <td>
+      <img src="https://github.com/jossiasmupandza/be-the-hero/blob/develop/screenshots/bethehero-mobile-incidents.png" />
+    </td>
+    <td>
+      <img src="https://github.com/jossiasmupandza/be-the-hero/blob/develop/screenshots/bethehero-mobile-details.png" />
+    </td>
+  </tr>
+</table>
+
 
 ## Technologies
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
-* Tech 3 - version 3.0
+Data base:
+* SQLite 3 - version 4.1.1
+* Knex query builder - version 0.20.13
+
+The backend is a resful API, built with:
+* Express framework - version 4.17.1
+* Cors - version 2.8.5
+* celebrate with joi, for route validation - version 12.2.0
+* cross-env - 7.0.2
+* nodemon as a dev depedency for fast reloads - version 2.0.2
+
+Frontend, for the web aplication:
+* React framework - version 16.13.1
+* Axios for https requests - version 0.19.2
+* Others
+
+Mobile aplication:
+* React Native - version 38.0.2
+* Expo - version 38.0.8
+* Others
+
+Automated unit and integration tests:
+* Jest - version 26.4.2
+* Supertest fot https request in test enviroment - version 4.0.2
 
 ## Setup
 Describe how to install / setup your local environement / add link to demo version.
