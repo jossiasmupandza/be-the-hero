@@ -99,6 +99,9 @@ npm start
 ```
 3. Open expo app and scan the QR Code shown on your browser (note: you must have internet connection).
 
+## Demo
+Website: [betheherojm.netlify.app](https://betheherojm.netlify.app/) </br>
+Dowloand Apk: [betheherojm.apk](https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40jossiasmupandza/be-the-hero-c7053165295c46daa23f826794862618-signed.apk)
 
 ## Features
 List of features 
