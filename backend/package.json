@@ -1,5 +1,5 @@
 {
-  "name": "betheone",
+  "name": "bethehero",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "stop-linux": "killall node",
     "test": "cross-env NODE_ENV=test jest"
   },
-  "author": "",
+  "author": "jossias mupandza",
   "license": "ISC",
   "dependencies": {
     "celebrate": "^12.2.0",
