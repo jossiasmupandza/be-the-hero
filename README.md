@@ -6,6 +6,7 @@
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Demo](#demo)
 * [Features](#features)
 * [Status](#status)
 * [Inspiration](#inspiration)
