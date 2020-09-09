@@ -42,56 +42,79 @@ The application consists of a web and a mobile hybrid application (Android / IOS
     </td>
   </tr>
 </table>
-
+<img src="https://github.com/jossiasmupandza/be-the-hero/blob/develop/screenshots/bethehero-logo.png" />
 
 ## Technologies
-Data base:
+**Data base**:
 * SQLite 3 - version 4.1.1
 * Knex query builder - version 0.20.13
 
-The backend is a resful API, built with:
+**Backend**, is a resful API built with:
 * Express framework - version 4.17.1
 * Cors - version 2.8.5
 * celebrate with joi, for route validation - version 12.2.0
 * cross-env - 7.0.2
 * nodemon as a dev depedency for fast reloads - version 2.0.2
 
-Frontend, for the web aplication:
+**Web aplication**:
 * React framework - version 16.13.1
 * Axios for https requests - version 0.19.2
 * Others
 
-Mobile aplication:
+**Mobile aplication**:
 * React Native - version 38.0.2
 * Expo - version 38.0.8
 * Others
 
-Automated unit and integration tests:
+**Automated unit and integration tests**:
 * Jest - version 26.4.2
 * Supertest fot https request in test enviroment - version 4.0.2
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
+To run this project install <a href="https://nodejs.org/en/">Node.js</a> on your machine, version 12.15.0 or higher. after insttal fallow the steps (On root of the project, using a terminal of your choice):
 
-## Code Examples
-Show examples of usage:
-`put-your-code-here`
+### 1. Start the api server
+```python
+cd backend
+npm i
+npm start
+```
+
+### 2. Start the website server
+```python
+cd frontend
+npm i
+npm start
+```
+### 3. Run the mobile aplication
+**On Android**:
+1.install <a href="https://play.google.com/store/apps/details?id=host.exp.exponent&hl=pt">Expo Apk</a> from play store on your mobile device.
+
+2.On root of the project, using a terminal of your choice:
+```python
+npm install -g expo-cli
+cd mobile
+npm i
+npm start
+```
+3. Open expo app and scan the QR Code shown on your browser (note: you must have internet connection).
+
 
 ## Features
-List of features ready and TODOs for future development
-* Awesome feature 1
-* Awesome feature 2
-* Awesome feature 3
-
-To-do list:
-* Wow improvement to be done 1
-* Wow improvement to be done 2
+List of features 
+* Registration of NGOs
+* NGOs authentication
+* NGOs can add cases with a detailed description and required value
+* View list of cases
+* Contact NGOs by Whatsapp
+* Contact NGOs by email
 
 ## Status
-Project is: _in progress_, _finished_, _no longer continue_ and why?
+Project is: _finished_, all the expected features were covered.
 
 ## Inspiration
-Add here credits. Project inspired by..., based on...
+This project was developed during the oministack 11.0 week provided by [Rocketseat](https://rocketseat.com.br/). 
+**Instructor: [Diego Fernandes](https://github.com/diego3g) | CTO Rocketseat*
 
 ## Contact
-Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
+Created by [@jossiasmupandza](https://github.com/jossiasmupandza) - feel free to contact me!
