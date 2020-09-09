@@ -1,2 +1,49 @@
-# bethehero_omnistack
- web and mobile app developed using: node.js, express, react native, reactjs
+# Be The Hero
+> Be The Hero aims to connect NGOs (non-governmental organizations) to people willing to help through monetary values. This project was developed during the oministack 11.0 week provided by @ Rocketseat, where we developed a web and mobile application using a stack based on the javascript language.
+
+## Table of contents
+* [General info](#general-info)
+* [Screenshots](#screenshots)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Features](#features)
+* [Status](#status)
+* [Inspiration](#inspiration)
+* [Contact](#contact)
+
+## General info
+The application consists of a web and a mobile hybrid application (Android / IOS). NGOs use the web application to register and expose their cases, that is, a description for each exposed case as well as the amount needed to resolve it. People willing to help make use of the mobile application to view the cases and contact the NGOs to make donations.
+
+## Screenshots
+![Example screenshot](./img/screenshot.png)
+
+## Technologies
+* Tech 1 - version 1.0
+* Tech 2 - version 2.0
+* Tech 3 - version 3.0
+
+## Setup
+Describe how to install / setup your local environement / add link to demo version.
+
+## Code Examples
+Show examples of usage:
+`put-your-code-here`
+
+## Features
+List of features ready and TODOs for future development
+* Awesome feature 1
+* Awesome feature 2
+* Awesome feature 3
+
+To-do list:
+* Wow improvement to be done 1
+* Wow improvement to be done 2
+
+## Status
+Project is: _in progress_, _finished_, _no longer continue_ and why?
+
+## Inspiration
+Add here credits. Project inspired by..., based on...
+
+## Contact
+Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
