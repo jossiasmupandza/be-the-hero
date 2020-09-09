@@ -14,6 +14,7 @@ module.exports = app;
 /*
 Rotas/recursos
 
+
 Metodos HTTP
 GET: buscar/listar informacao do backend
 POST: criar innformacao no backend
